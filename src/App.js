@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
+import {Navbar,Footer,sidebar,ThemeSettings} from './components';
+import {Ecommerce,orders,Calendar,Employess,Stacked,pyramid,Customers,Kanban,Area,bar,Pie,Financial,ColorPicker,ColorMapping,Editor} from './pages';
 const App = () => {
   const activeMenu = false;
 
