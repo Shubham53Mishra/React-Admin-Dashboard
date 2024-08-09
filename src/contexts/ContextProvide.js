@@ -1,4 +1,4 @@
-import React, { Children, createContext, useState } from 'react';
+import React, { Children, createContext, useContext, useState } from 'react';
 import { Cart, Chat, Notification } from '../components';
 import { userProfileData } from '../data/dummy';
 
@@ -14,10 +14,13 @@ export const ContextProvider =( {Children}) => {
     const [activeMenu,setActiveMenu] =useState (true);
     return  (
         <StateContext.Provider
-            value={{test :'test'}}
+            value={{
+                activeMenu,
+                setActiveMenu,
+            }}
           >  
           {Children}
         </StateContext.Provider>
     )
 }
-
+export const useStateContext = () => useContext (StateContext)
