@@ -1,14 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client'; // This is correct for React 18
 
-import App from './App.js';
+import App from './App';
+import './index.css';
+import { ContextProvider } from './contexts/ContextProvide';
 
-import './index.css'
-import { ContextProvider } from './contexts/ContextProvide.js';
+const root = ReactDOM.createRoot(document.getElementById('root')); // Create a root
 
- 
-ReactDOM.render(
-  <ContextProvider>
-    <App/>
-  </ContextProvider>,
-  document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <ContextProvider>
+      <App />
+    </ContextProvider>
+  </React.StrictMode>
+);
